@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Feliz Año Nuevo 2026 ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div id="startScreen" class="start-screen">
+        <div class="start-content">
+            <div class="heart-animation">❤️</div>
+            <h1 class="start-title">Para Ti</h1>
+            <p class="start-subtitle">Mi Amor</p>
+            
+            <button id="startBtn" class="start-button">
+                <span>Toca Aquí</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Canvas para fuegos artificiales -->
+        <canvas id="fireworks"></canvas>
+
+        <!-- PANTALLA IMPACTANTE DE AÑO NUEVO -->
+        <div id="newYearImpact" class="new-year-impact">
+            <div class="impact-content">
+                <h1 class="impact-year">2026</h1>
+                <h2 class="impact-title">¡Feliz Año Nuevo Amor❤️!</h2>
+                <p class="impact-subtitle">Nuestro nuevo comienzo</p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: Año Nuevo + Recuerdos -->
+        <section class="section memories-section" data-section="0">
+            <div class="section-content">
+                <h1 class="main-title">¡Feliz Año Nuevo 2026!</h1>
+                <p class="main-subtitle">Un nuevo capítulo juntos ❤️</p>
+                
+                <h2 class="section-title">Algunos de Nuestros Recuerdos ✨</h2>
+                
+                <div class="memories-gallery" id="memoriesGallery">
+                    <!-- Memoria 1 -->
+                    <div class="memory-item active" data-index="0">
+                        <div class="memory-frame-romantic">
+                            <div class="corner-deco top-left">💪</div>
+                            <div class="corner-deco top-right">💪</div>
+                            <div class="corner-deco bottom-left">💪</div>
+                            <div class="corner-deco bottom-right">💪</div>
+                            <div class="memory-inner">
+                                <img src="recuerdo1.jpeg" alt="Recuerdo 1">
+                                <div class="memory-overlay-text">
+                                    <h3 class="memory-overlay-title">Nuestro Primer Encuentro Amor/GYM</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memoria 2 -->
+                    <div class="memory-item" data-index="1">
+                        <div class="memory-frame-romantic">
+                            <div class="corner-deco top-left">😊</div>
+                            <div class="corner-deco top-right">😊</div>
+                            <div class="corner-deco bottom-left">😊</div>
+                            <div class="corner-deco bottom-right">😊</div>
+                            <div class="memory-inner">
+                                <img src="recuerdo2.jpeg" alt="Recuerdo 2">
+                                <div class="memory-overlay-text">
+                                    <h3 class="memory-overlay-title">Nuestro Lugar Amor</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memoria 3 -->
+                    <div class="memory-item" data-index="2">
+                        <div class="memory-frame-romantic">
+                            <div class="corner-deco top-left">💕</div>
+                            <div class="corner-deco top-right">💕</div>
+                            <div class="corner-deco bottom-left">💕</div>
+                            <div class="corner-deco bottom-right">💕</div>
+                            <div class="memory-inner">
+                                <img src="recuerdo3.jpeg" alt="Recuerdo 3">
+                                <div class="memory-overlay-text">
+                                    <h3 class="memory-overlay-title">Nuestra primera promesa Amor</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memoria 4 -->
+                    <div class="memory-item" data-index="3">
+                        <div class="memory-frame-romantic">
+                            <div class="corner-deco top-left">🌱</div>
+                            <div class="corner-deco top-right">🌱</div>
+                            <div class="corner-deco bottom-left">🌱</div>
+                            <div class="corner-deco bottom-right">🌱</div>
+                            <div class="memory-inner">
+                                <img src="recuerdo4.svg" alt="Recuerdo 4">
+                                <div class="memory-overlay-text">
+                                    <h3 class="memory-overlay-title">Tu primer cumpleaños Juntos</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-controls">
+                    <button class="memory-btn prev-memory" aria-label="Anterior">‹</button>
+                    <div class="memory-dots" id="memoryDots"></div>
+                    <button class="memory-btn next-memory" aria-label="Siguiente">›</button>
+                </div>
+
+                <div class="swipe-hint">👆 Desliza para continuar amor</div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: Galería de Fotos de Ella -->
+        <section class="section photos-section" data-section="1">
+            <div class="section-content">
+                <div class="romantic-header">
+                    <div class="floating-hearts">
+                        <span class="float-heart">💕</span>
+                        <span class="float-heart">💖</span>
+                        <span class="float-heart">💗</span>
+                        <span class="float-heart">💝</span>
+                        <span class="float-heart">💕</span>
+                    </div>
+                    <h2 class="romantic-title">Mi Mujer la Más Hermosa</h2>
+                    <p class="romantic-subtitle">Cada foto es un tesoro para mi corazón</p>
+                </div>
+                
+                <div class="photo-gallery" id="photoGallery">
+                    <!-- Foto 1 -->
+                    <div class="photo-item active" data-index="0">
+                        <div class="photo-frame-romantic">
+                            <div class="corner-deco top-left">❤️</div>
+                            <div class="corner-deco top-right">❤️</div>
+                            <div class="corner-deco bottom-left">❤️</div>
+                            <div class="corner-deco bottom-right">❤️</div>
+                            <div class="photo-inner">
+                                <img src="foto1.jpg" alt="Mi Amor">
+                                <div class="photo-overlay-text">
+                                    <p class="overlay-quote">"Tu ojos ilumina mis días más oscuros"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 2 -->
+                    <div class="photo-item" data-index="1">
+                        <div class="photo-frame-romantic">
+                            <div class="corner-deco top-left">🌹</div>
+                            <div class="corner-deco top-right">🌹</div>
+                            <div class="corner-deco bottom-left">🌹</div>
+                            <div class="corner-deco bottom-right">🌹</div>
+                            <div class="photo-inner">
+                                <img src="foto2.jpeg" alt="Mi Amor">
+                                <div class="photo-overlay-text">
+                                    <p class="overlay-quote">"Eres la poesía que nunca supe escribir. Solo amar¡"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 3 -->
+                    <div class="photo-item" data-index="2">
+                        <div class="photo-frame-romantic">
+                            <div class="corner-deco top-left">💖</div>
+                            <div class="corner-deco top-right">💖</div>
+                            <div class="corner-deco bottom-left">💖</div>
+                            <div class="corner-deco bottom-right">💖</div>
+                            <div class="photo-inner">
+                                <img src="foto3.jpeg" alt="Mi Amor">
+                                <div class="photo-overlay-text">
+                                    <p class="overlay-quote">"En tus brazos encontré mi lugar favorito"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 4 -->
+                    <div class="photo-item" data-index="3">
+                        <div class="photo-frame-romantic">
+                            <div class="corner-deco top-left">🦋</div>
+                            <div class="corner-deco top-right">🦋</div>
+                            <div class="corner-deco bottom-left">🦋</div>
+                            <div class="corner-deco bottom-right">🦋</div>
+                            <div class="photo-inner">
+                                <img src="foto4.svg" alt="Mi Amor">
+                                <div class="photo-overlay-text">
+                                    <p class="overlay-quote">“No provocas miradas… provocas incendios Amor🔥uff💋.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 5 -->
+                    <div class="photo-item" data-index="4">
+                        <div class="photo-frame-romantic">
+                            <div class="corner-deco top-left">💗</div>
+                            <div class="corner-deco top-right">💗</div>
+                            <div class="corner-deco bottom-left">💗</div>
+                            <div class="corner-deco bottom-right">💗</div>
+                            <div class="photo-inner">
+                                <img src="foto5.jpeg" alt="Mi Amor">
+                                <div class="photo-overlay-text">
+                                    <p class="overlay-quote">"Eres mi reina, mi todo, mi siempre"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="photo-controls">
+                    <button class="photo-btn prev-photo" aria-label="Anterior">‹</button>
+                    <div class="photo-dots" id="photoDots"></div>
+                    <button class="photo-btn next-photo" aria-label="Siguiente">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: Mensaje Final -->
+        <section class="section final-section" data-section="2">
+            <div class="section-content">
+                <div class="final-card">
+                    <div class="final-header">
+                        <h2 class="final-title">Nuestro Futuro Juntos</h2>
+                        <div class="hearts-decoration">
+                            <span class="heart">💕</span>
+                            <span class="heart">💖</span>
+                            <span class="heart">💕</span>
+                        </div>
+                    </div>
+                    
+                    <div class="final-content">
+                        <p class="final-paragraph">
+        Amor… mientras te miro, no puedo evitar pensar en todo lo que hemos vivido este año. 
+        Hubo días en los que el silencio pesó más que las palabras, en los que el corazón dolía 
+        y parecía que todo se nos escapaba de las manos. Hubo momentos en los que nos perdimos, 
+        en los que dudamos, en los que el miedo habló más fuerte que el amor… y aun así, aquí estamos.
+    </p>
+    
+    <p class="final-paragraph">
+        Te miro y recuerdo cada lágrima, cada noche difícil, cada instante en el que sentí que 
+        podíamos perdernos. Pero también recuerdo cómo volvimos a encontrarnos, cómo nos elegimos 
+        otra vez, con el corazón cansado pero Muy sincero. Porque aunque el camino dolió, el amor 
+        que sentimos fue más fuerte que cualquier herida, orgullo o distancia.
+    </p>
+
+    <p class="final-paragraph">
+        Y ahora, mirándote de frente, con el corazón más consciente, con el alma más madura y con la certeza de que eres tu a quien quiero a mi lado,  
+        quiero decirte que este nuevo año luchemos por nuestros sueños y proyectos. Aprovechemos las oportunidades 
+        para crecer juntos como personas, como pareja y como hij@s/herman@s. No prometo que todo será fácil, pero sí PROMETO que caminaré a tu lado pase lo que pase, 
+        que lucharé contigo y que nunca dejaré de elegirte.
+    </p>
+                        
+                        <div class="quote-box">
+                            <div class="quote-icon">"</div>
+                            <p class="quote-text">
+                                No podemos cambiar el pasado Amoor, pero te aseguro que podremos elegir 
+                                quién queremos ser a partir de ahora
+                            </p>
+                            <div class="quote-icon bottom">"</div>
+                        </div>
+                        
+                        <div class="lema-box">
+                            <h3 class="lema-header">💫 Nuestro Lema 💫</h3>
+                            <div class="lema-content">
+                                <p class="lema-line">Ser Constantes</p>
+                                <p class="lema-line">Ser Valientes</p>
+                                <p class="lema-line emphasis">Ser la mejor versión de nosotros mismos¡¡¡</p>
+                                <p class="lema-final">NO RENDIRNOS JAMÁS</p>
+                            </div>
+                        </div>
+                        
+                        <p class="final-paragraph closing">
+                            Que este 2026 nos traiga más amor, más crecimiento, más aventuras 
+                            y más momentos inolvidables a tu lado mi Amor. Estoy emocionado por todo lo que nos 
+                            espera y por seguir construyendo nuestro futuro juntos.
+                        </p>
+                        
+                        <div class="final-signature">
+                            <p class="signature-text">Te amo con toda mi Alma</p>
+                            <div class="signature-hearts">❤️ 💕 ❤️</div>
+                            <p class="signature-date">Feliz Año Nuevo 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Audios para cada sección -->
+    <audio id="music1" loop>
+        <source src="cancion1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music2" loop>
+        <source src="cancion2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="music3" loop>
+        <source src="cancion3.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
